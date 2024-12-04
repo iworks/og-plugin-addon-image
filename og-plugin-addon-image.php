@@ -19,15 +19,10 @@
  * Text Domain:       og-plugin-addon-image
  * License:           GPL v3 or later
  * License URI:       http://www.gnu.org/licenses/gpl-1.0.txt
+ * Requires Plugins:  og
  */
 
 class iworks_og_plugin_addon_image {
-
-	// private $config = [
-		// 'fields' =>[
-			// 'type' => 'media',
-			// '
-		// '{"title":"og:image","prefix":"_og","domain":"og-plugin-addon-image","class_name":"Og_Plugin_Addon_Image","post-type":["post"],"context":"normal","priority":"default","fields":[{"type":"media","label":"og:image","return":"url","id":"_ogogimage"}]}';
 
 	private $post_types = array(
 		'post',
