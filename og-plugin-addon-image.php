@@ -9,9 +9,9 @@
  *
  * @wordpress-plugin
  * Plugin Name:       OG — Addon: og:image
- * Plugin URI:        http://iworks.pl
+ * Plugin URI:        https://github.com/iworks/og-plugin-addon-image
  * Description:       Extension for OG WordPress plugin allows you to add a og:image.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.0
  * Requires PHP:      8.0
  * Author:            Marcin Pietrzak
@@ -35,6 +35,7 @@ class iworks_og_plugin_addon_image {
 		add_action( 'add_meta_boxes', array( $this, 'add_meta_boxes' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
 		add_action( 'admin_head', array( $this, 'admin_head' ) );
+		add_action( 'init', array( $this, 'action_load_plugin_textdomain' ), 0 );
 		add_action( 'save_post', array( $this, 'save_post' ) );
 		add_filter( 'og_array', array( $this, 'filter_og_og_image' ) );
 	}
@@ -149,7 +150,7 @@ class iworks_og_plugin_addon_image {
 	<button type="button" class="components-button editor-post-featured-image__toggle editor-og-image">
 		<?php
 		if ( empty( $url ) ) {
-			esc_html_e( 'Set OG:image', 'og-plugin-addon-image' );
+			esc_html_e( 'Set og:image', 'og-plugin-addon-image' );
 		} else {
 			printf(
 				'<span class="components-responsive-wrapper"><div><img src="%s" alt="" class="components-responsive-wrapper__content"></div></span>',
@@ -165,6 +166,19 @@ class iworks_og_plugin_addon_image {
 		<?php
 	}
 
+	/**
+	 * i18n
+	 *
+	 * @since 1.0.1
+	 */
+	public function action_load_plugin_textdomain() {
+		return;
+		load_plugin_textdomain(
+			'og-plugin-addon-image',
+			false,
+			plugin_basename( $this->root ) . '/languages'
+		);
+	}
 
 }
 
