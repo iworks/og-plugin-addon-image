@@ -4,14 +4,14 @@
  *
  * @package           OG Plugin Addon: og:image
  * @author            Marcin Pietrzak
- * @copyright         2023 Marcin Pietrzak
+ * @copyright         2023-2025 Marcin Pietrzak
  * @license           GPL-3.0-or-later
  *
  * @wordpress-plugin
  * Plugin Name:       OG — Addon: og:image
  * Plugin URI:        https://github.com/iworks/og-plugin-addon-image
  * Description:       Extension for OG WordPress plugin allows you to add a og:image.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Requires at least: 6.0
  * Requires PHP:      8.0
  * Author:            Marcin Pietrzak
